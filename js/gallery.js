@@ -23,8 +23,17 @@ $(document).ready(() => {
 // Function to fetch JSON data and store it in mImages
 function fetchJSON () {
   // Use $.getJSON here to request the JSON data from mUrl
+  $.getJSON('myImages.json', function(data) {
+    myImages = data;
+    console.log("Data loaded into myImages", myImages);
+  });
   // On success, parse the JSON and push each image object into mImages array
+  const data = JSON.parse(xhr.responseText);
   // After JSON is loaded, call swapPhoto() to display the first image
+  document.getElementById("swapPhoto").addEventListener("click", function() {
+    swapPhoto('img/2025-nba-playoffs-new-york-knicks-v-detroit-pistons-game-six-nathaniel-s-butler.jpg, ')
+
+  })
 }
 
 // Function to swap and display the next photo in the slideshow

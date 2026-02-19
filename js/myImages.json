@@ -26,57 +26,40 @@
         },
         {
             "imgPath": "img/",
-            "imgLocation": "",
-            "description": "",
-            "date": ""
+            "imgLocation": "Madison Sqaure Garden, NYC, NY",
+            "description": "Knicks Star Karl Anthony Towns blocks shot in Knicks win over Memphis in MSG. ",
+            "date": "November 11th, 2025"
         },
         {
             "imgPath": "img/",
-            "imgLocation": "",
-            "description": "",
-            "date": ""
+            "imgLocation": "Toyota Center, Houston, TX",
+            "description": "Kawhi Leonard hits a game winning three-point play with two seconds remaining to lift the Clippers to a 105-102 comeback win vs the Rockets; ends with 27.",
+            "date": "February 11th, 2026"
         },
         {
             "imgPath": "img/",
-            "imgLocation": "",
-            "description": "",
-            "date": ""
+            "imgLocation": "PHX Arena, Phoenix, AZ",
+            "description": "Thunder Superstar Shai Gilgeous-Alexander drives on Phoenix Suns forward Ryan Dunn.",
+            "date": "January 4th, 2026"
         },
         {
             "imgPath": "img/",
-            "imgLocation": "",
-            "description": "",
-            "date": ""
+            "imgLocation": "Crypto.com Arena, Los Angeles, CA",
+            "description": "LeBron James breaks the all time scoring record with a 14 foot fadeaway jumper against the OKC Thunder!",
+            "date": "February 7th, 2023"
         },
         {
             "imgPath": "img/",
-            "imgLocation": "",
-            "description": "",
-            "date": ""
+            "imgLocation": "Chase Center, San Francisco, CA",
+            "description": "Golden State's Stephen Curry hits 3 during preseason game against the Nuggets; has high hopes for the season.",
+            "date": "October 6th, 2021"
         },
         {
             "imgPath": "img/",
-            "imgLocation": "",
-            "description": "",
-            "date": ""
-        },
-        {
-            "imgPath": "img/",
-            "imgLocation": "",
-            "description": "",
-            "date": ""
-        },
-        {
-            "imgPath": "img/",
-            "imgLocation": "",
-            "description": "",
-            "date": ""
-        },
-        {
-            "imgPath": "img/",
-            "imgLocation": "",
-            "description": "",
-            "date": ""
+            "imgLocation": "AmericanAirlines Arena, Miami, FL",
+            "description": "Heat's LeBron James and Dallas' Dirk Nowitzki battle for the ball during the 2011 NBA Finals",
+            "date": "May 31st, 2011"
         }
+        
   ]
 }

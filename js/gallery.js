@@ -38,6 +38,12 @@ function fetchJSON () {
 
 // Function to swap and display the next photo in the slideshow
 function swapPhoto () {
+
+  let currentImage = mImages[mCurrentIndex];
+  $("#photo").attr("src", currentImage.image);
+  $(".location").text(currentImage.location);
+  $(".description").text(currentImage.description);
+  $(".date").text(currentImage.date);
   // Access mImages[mCurrentIndex] to update the image source and details
   // Update the #photo element's src attribute with the current image's path
   // Update the .location, .description, and .date elements with the current image's details
@@ -45,18 +51,41 @@ function swapPhoto () {
 
 // Advances to the next photo, loops to the first photo if the end of array is reached
 function showNextPhoto () {
+
+  mCurrentIndex++;
+
+  if(mCurrentIndex >= mImages.length){
+    mCurrentIndex = 0;
+  }
+
+  swapPhoto();
+
   // Increment mCurrentIndex and call swapPhoto()
   // Ensure it loops back to the beginning if mCurrentIndex exceeds array length
 }
 
 // Goes to the previous photo, loops to the last photo if mCurrentIndex goes negative
 function showPrevPhoto () {
+
+  if(mCurrentIndex < 0){
+    mCurrentIndex = mImages.length - 1;
+  }
+
+  prevPhoto();
+
   // Decrement mCurrentIndex and call swapPhoto()
   // Ensure it loops to the end if mCurrentIndex is less than 0
 }
 
 // Starter code for the timer function
 function startTimer () {
+  if (mTimer !== null) {
+    clearInterval(mTimer)
+  }
+
+  mTimer = setInterval(function (){
+    showNextPhoto();
+  }), mWaitTime
   // Create a timer to automatically call `showNextPhoto()` every mWaitTime milliseconds
   // Consider using setInterval to achieve this functionality
   // Hint: Make sure only one timer runs at a time

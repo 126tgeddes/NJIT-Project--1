@@ -7,12 +7,20 @@ $(document).ready(() => {
   $('.details').hide() // Hide details initially
 
   // Call a function here to start the timer for the slideshow
+let slideInterval = setInterval(nextSlide, 3000);
+
+function nextSlide() {
+   
+}
 
   // Select the moreIndicator button and add a click event to:
   // - toggle the rotation classes (rot90 and rot270)
   // - slideToggle the visibility of the .details section
+  document.getElementById("moreIndicator").addEventListener("click", handleClick);
+
 
   // Select the "Next Photo" button and add a click event to call showNextPhoto
+  document.getElementById("nextPhoto").addEventListener("click", handleClick);
 
   // Select the "Previous Photo" button and add a click event to call showPrevPhoto
 

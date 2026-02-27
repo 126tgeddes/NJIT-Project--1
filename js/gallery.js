@@ -17,12 +17,17 @@ function nextSlide() {
   // - toggle the rotation classes (rot90 and rot270)
   // - slideToggle the visibility of the .details section
   document.getElementById("moreIndicator").addEventListener("click", handleClick);
+  element.classList.toggle('rot90');
+  element.classList.toggle('rot270');
+
+
 
 
   // Select the "Next Photo" button and add a click event to call showNextPhoto
   document.getElementById("nextPhoto").addEventListener("click", handleClick);
 
   // Select the "Previous Photo" button and add a click event to call showPrevPhoto
+    document.getElementById("prevPhoto").addEventListener("click", handleClick);
 
   // Call fetchJSON() to load the initial set of images
   fetchJSON()
@@ -39,7 +44,7 @@ function fetchJSON () {
   const data = JSON.parse(xhr.responseText);
   // After JSON is loaded, call swapPhoto() to display the first image
   document.getElementById("swapPhoto").addEventListener("click", function() {
-    swapPhoto('img/2025-nba-playoffs-new-york-knicks-v-detroit-pistons-game-six-nathaniel-s-butler.jpg, ')
+    swapPhoto('img/1.jpg, ')
 
   })
 }
@@ -67,10 +72,19 @@ function showNextPhoto () {
   }
 
   swapPhoto();
-
+}
   // Increment mCurrentIndex and call swapPhoto()
   // Ensure it loops back to the beginning if mCurrentIndex exceeds array length
-}
+const images = ['1.jpg''2.jpg''3.webp'];
+let index = 0;
+const imageElement = document.getElementById('img');
+const button = document.getElementById('nextPhoto');
+
+button.addEventListener('click'() => {
+  index = (index + 1) % images.length; 
+  imageElement.src = images[index]; 
+});
+
 
 // Goes to the previous photo, loops to the last photo if mCurrentIndex goes negative
 function showPrevPhoto () {
@@ -94,7 +108,33 @@ function startTimer () {
   mTimer = setInterval(function (){
     showNextPhoto();
   }), mWaitTime
+}
   // Create a timer to automatically call `showNextPhoto()` every mWaitTime milliseconds
   // Consider using setInterval to achieve this functionality
   // Hint: Make sure only one timer runs at a time
+
+  const imagePaths = [
+    '1.jpg',
+    '2.jpg',
+    '3.webp',
+    '4.jpg'
+];
+
+const slideshowImg = document.getElementById('slideshow-img');
+
+let currentIndex = 0;
+
+function nextPhoto() {
+    slideshowImg.src = imagePaths[currentIndex];
+
+    currentIndex++;
+
+    if (currentIndex >= imagePaths.length) {
+        currentIndex = 0;
+    }
 }
+
+const timerId = setInterval(nextPhoto, mWaitTime);
+
+
+

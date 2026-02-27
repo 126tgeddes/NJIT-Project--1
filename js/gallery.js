@@ -75,15 +75,16 @@ function showNextPhoto () {
 }
   // Increment mCurrentIndex and call swapPhoto()
   // Ensure it loops back to the beginning if mCurrentIndex exceeds array length
-const images = ['1.jpg''2.jpg''3.webp'];
+const images = ['1.jpg','2.jpg','3.webp'];
 let index = 0;
-const imageElement = document.getElementById('img');
+const img = document.getElementById('photo');
 const button = document.getElementById('nextPhoto');
 
-button.addEventListener('click'() => {
-  index = (index + 1) % images.length; 
-  imageElement.src = images[index]; 
+$('#nextPhoto').on('click', function() {
+  img.src = images[index + 1];
 });
+
+
 
 
 // Goes to the previous photo, loops to the last photo if mCurrentIndex goes negative
